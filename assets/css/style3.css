@@ -88,6 +88,10 @@ html {
     display: inline-block;
     margin-bottom: 16px;
     border: none;
+    text-align: center;
+    /* fix button khi hiện trên đt iphone, bỏ đi style mặc định của nó */
+    appearance: none;
+    -webkit-appearance: none;
 }
 .btn:hover {
     cursor: pointer;
@@ -98,7 +102,9 @@ html {
 /* main */
 
 #main {
-
+    /* fix bug tk con nào lòi ra khỏi tk cha thi ẩn nó đi luôn, media queries: tablet.
+    Nhưng cách này ko tối ưu, ko nên làm
+    overflow: hidden; */
 }
 
 /* 1.Header */
@@ -110,20 +116,41 @@ html {
     height: var(--header-height);
     background-color: #000;
     z-index: 1;
-}
-
-#header .search-btn {
-    float: right;
-    color: #fff;
-    line-height: var(--header-height);
-    padding: 0 21px;
     
 }
 
+#header .menu-mobile-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .menu-mobile-btn,
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+    
+}
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
 }
+#header .menu-mobile-btn:hover {
+    background-color: #ccc;
+}
+#header .menu-mobile-btn:hover .menu-icon {
+    color :#000;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: #fff;
+    line-height: var(--header-height);
+    font-size: 20px;
+}
+
+
 
 #nav {
     display: inline-block;
@@ -208,6 +235,7 @@ html {
 #slider .text-decription {
     font-size: 15px;
     margin-top: 25px;
+    text-shadow: 0 0 1px #000;
 }
 /* 3.Content */
 #content {
@@ -219,7 +247,9 @@ html {
     padding: 64px 16px 112px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    max-width: 800px !important;
+    /* media queries: tablet*/
+    max-width: 100%;
 }
 
 #content .section-heading {
@@ -245,13 +275,9 @@ html {
 }
 /*  */
 #content .member-list {
-    margin-top: 47px;
+    margin-top: 32px;
     /* margin-bottom: 16px; */
     /* overflow: hidden;   giải quyết vấn đề float: left */
-}
-
-#content .member-item {
-
 }
 
 #content .member-name {
@@ -298,7 +324,7 @@ html {
 }
 /*  */
 .places-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .places-list .place-img {
@@ -342,6 +368,14 @@ html {
 .contact-info i[class*="ti-"] {
     width: 30px;
     display: inline-block;
+}
+
+.contact-info  a {
+    color: #101aef;
+    opacity: 0.8;
+}
+.contact-info  a:hover {
+    opacity: 1;
 }
 
 .contact-form {

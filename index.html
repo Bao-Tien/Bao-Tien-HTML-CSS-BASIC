@@ -7,6 +7,7 @@
     <title>The band</title>
     <link rel="icon" href="./assets/img/band-icon.jfif" type="image/gif" sizes="16x16"> 
     <link rel="stylesheet" href="./assets/css/style3.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -35,11 +36,16 @@
             <!-- sau này sẽ mặc định chữ Hoa trong CSS -->
             <!-- Begin: Nav -->
 
-            <!-- Begin: Search button -->
+            <!-- media queries: mobile -->
+            <!-- Mobile menu button -->
+            <div id="mobile-menu" class="menu-mobile-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            <!-- Search button -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-            <!-- End: Search button -->
+            
         </div>
 
         <!-- 2.Slider -->
@@ -65,16 +71,16 @@
                     We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
 
-                <div class="row member-list text-center">
-                    <div class="col col-third member-item">
+                <div class="row member-list">
+                    <div class="col col-third s-col-full mt-16 text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="bandmember" class="member-image">
                     </div>
-                    <div class="col col-third member-item">
+                    <div class="col col-third s-col-full mt-16 text-center">
                         <div class="member-name">Name</div>
                         <img src="./assets/img/bandmember.jpg" alt="bandmember" class="member-image">
                     </div>
-                    <div class="col col-third member-item">
+                    <div class="col col-third s-col-full mt-16 text-center">
                         <div class="member-name">Name</div>
                         <img src="./assets/img/bandmember.jpg" alt="bandmember" class="member-image">
                     </div>
@@ -97,31 +103,31 @@
                     </div>
 
                     <div class="row places-list">
-                        <div class="col col-third place-item">
+                        <div class="col col-third place-item s-col-full mt-16">
                             <img src="./assets/img/place1.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn text-white">Buy tickets</a>
+                                <a href="#" class="btn text-white s-full-width">Buy tickets</a>
                             </div>
                         </div>
-                        <div class="col col-third place-item">
+                        <div class="col col-third place-item s-col-full mt-16">
                             <img src="./assets/img/place2.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn text-white">Buy tickets</a>
+                                <a href="#" class="btn text-white s-full-width">Buy tickets</a>
                             </div>
                         </div>
-                        <div class="col col-third place-item">
+                        <div class="col col-third place-item s-col-full mt-16">
                             <img src="./assets/img/place3.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn text-white">Buy tickets</a>
+                                <a href="#" class="btn text-white s-full-width">Buy tickets</a>
                             </div>
                         </div>
                         <!-- <div class="clear"></div> -->
@@ -135,19 +141,19 @@
                 
                 <div class="contact-content">
                     <div class="row">
-                        <div class="col col-half contact-info">
+                        <div class="col col-half s-col-full contact-info">
                             <p><i class="ti-location-pin"></i> Chicago, US</p>
-                            <p><i class="ti-mobile"></i>  Phone: +00 151515</p>
-                            <p><i class="ti-email"></i>  Email: mail@mail.com</p>
+                            <p><i class="ti-mobile"></i> Phone: <a href="tell:+00 151515">+00 151515</a> </p>
+                            <p><i class="ti-email"></i> Email: <a href="mailto:mail@mail.com">mail@mail.com</a> </p>
                         </div>
-                        <div class="col col-half contact-form"> <!-- A : 50% -->
+                        <div class="col col-half s-col-full contact-form"> <!-- A : 50% -->
                             <form action="">
                                 <div class="row">
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full">
                                         <!-- input:text.form-control -->
                                         <input type="text" name="" placeholder="Name" id="" class="form-control" required>
                                     </div>
-                                    <div class="col col-half">
+                                    <div class="col col-half s-col-full s-mt-8">
                                         <input type="email" name="" placeholder="Email" id="" class="form-control" required>
                                     </div>
                                     <!-- <div class="clear"></div> -->
@@ -157,7 +163,7 @@
                                         <input type="text" name="" placeholder="Message" id="" class="form-control" required> <!-- C: 100% B = 100% -->
                                     </div>
                                 </div>
-                                <input type="submit" value="SEND" class="mt-16 btn pull-right">
+                                <input type="submit" value="SEND" class="contact-submit-btn mt-16 btn pull-right s-full-width">
                             </form>
                         </div>
                     </div>
@@ -179,8 +185,42 @@
                 <a href=""><i class="ti-twitter"></i></a>
                 <a href=""><i class="ti-linkedin"></i></a>
             </div>
-            <p class="copyright">Powered by<a href=""> w3.css</a></p>
+            <p class="copyright">Powered by <a href=""> w3.css</a></p>
         </div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        
+        // đóng/mở mobile menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed)
+            {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i=0 ; i<menuItems.length ; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(event) {
+                // riêng More ko đóng // đặt trong này để khi click là chạy được ngay, ko bị tranh chấp
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu) {
+                    // bỏ qua sử kiện
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
